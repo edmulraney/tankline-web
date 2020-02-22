@@ -8,7 +8,8 @@
   "scripts": {
     "test": "jest",
     "build": "webpack --mode=production",
-    "pack": "npm pack"
+    "pack": "npm pack",
+    "publish": "npm publish --access public"
   },
   "keywords": [],
   "author": "",
