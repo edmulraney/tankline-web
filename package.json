@@ -6,10 +6,10 @@
     "lib": "lib"
   },
   "scripts": {
-    "install": "./scripts/install.sh",
-    "test": "./scripts/test.sh",
-    "build": "./scripts/build.sh",
-    "publish": "./scripts/publish.sh"
+    "install-pkg": "./scripts/install.sh",
+    "test-pkg": "./scripts/test.sh",
+    "build-pkg": "./scripts/build.sh",
+    "publish-pkg": "./scripts/publish.sh"
   },
   "keywords": [],
   "author": "",
