@@ -1,0 +1,16 @@
+{
+  "name": "tankline-web",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "./scripts/test.sh",
+    "build": "./scripts/build.sh"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
