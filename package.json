@@ -1,7 +1,6 @@
 {
-  "name": "tankline-web",
+  "name": "@tankline/tankline-web",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "directories": {
     "lib": "lib"
@@ -15,5 +14,14 @@
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/edmulraney/monorepo-demo.git"
+  },
+  "bugs": {
+    "url": "https://github.com/edmulraney/monorepo-demo/issues"
+  },
+  "homepage": "https://github.com/edmulraney/monorepo-demo#readme",
+  "description": ""
 }
