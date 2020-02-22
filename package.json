@@ -9,7 +9,6 @@
     "install": "./scripts/install.sh",
     "test": "./scripts/test.sh",
     "build": "./scripts/build.sh",
-    "pack": "./scripts/pack.sh",
     "publish": "./scripts/publish.sh"
   },
   "keywords": [],
