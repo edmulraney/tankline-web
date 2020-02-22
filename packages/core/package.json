@@ -2,13 +2,14 @@
   "name": "core",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "dist/main.js",
   "directories": {
     "lib": "lib"
   },
   "scripts": {
     "test": "jest",
-    "build": "webpack --mode=production"
+    "build": "webpack --mode=production",
+    "pack": "npm pack"
   },
   "keywords": [],
   "author": "",
