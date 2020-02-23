@@ -15,13 +15,17 @@ cd $package && npm version $2 &&
 git add package.json package-lock.json &&
 git commit -m "$package: ci tag (patch) " &&
 git push
-version=$(node -pe "require('./package.json').version")
 
-if [ -n $version ]; then 
-  git tag $1-$version
-  git push --tags
+if [ $? -eq 0 ]; then
+  version=$(node -pe "require('./package.json').version")
+  if [ -n $version ]; then 
+    git tag $1-$version
+    git push --tags
+  else
+    echo "couldn't get version from package. we haven't pushed a new git tag. please review"
+    exit 1
+  fi
 else
-  echo "couldn't get version from package. we haven't pushed a new git tag. please review"
   exit 1
 fi
 
