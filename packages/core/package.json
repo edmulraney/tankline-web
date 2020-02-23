@@ -1,6 +1,6 @@
 {
   "name": "@tankline/tankline-web-core",
-  "version": "1.9.19",
+  "version": "1.9.20",
   "main": "dist/main.js",
   "directories": {
     "lib": "lib"
