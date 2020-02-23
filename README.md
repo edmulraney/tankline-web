@@ -1,3 +1,3 @@
 # tankline-web
 
-Single release branch won't work for product areas being able to independently release their work.
+Single release branch won't allow product areas to independently release their work.

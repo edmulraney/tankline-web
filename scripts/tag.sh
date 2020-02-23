@@ -13,7 +13,7 @@ fi
 
 cd $package && npm version $2 &&
 git add package.json package-lock.json &&
-git commit -m "ci tag: patch" &&
+git commit -m "$package: ci tag (patch) " &&
 git push
 version=$(node -pe "require('./package.json').version")
 

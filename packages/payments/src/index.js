@@ -1,1 +1,1 @@
-console.log('payments123')
+console.log('payments')
