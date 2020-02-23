@@ -11,4 +11,7 @@ if ! [[ $2 != "major" || $2 != "minor" || $2 != "patch" ]]; then
   exit 1
 fi
 
-cd $package && npm version $2
+cd $package && npm version $2 &&
+git add package.json package-lock.json &&
+git commit -m 'ci: patch' &&
+git push --tags
