@@ -5,7 +5,8 @@ tag=$2
 confirmation=$3
 
 if ! [[ $confirmation == "confirm" ]]; then
-  echo "are you sure you want to create a new release cut? if so run this command again with --confirm as the last argument"
+  echo "are you sure you want to create a new release cut?"
+  echo "if so, run this command again with --confirm as the last argument"
   exit 1
 fi
 
@@ -22,5 +23,9 @@ git checkout develop &&
 git pull &&
 npm version minor &&
 git add package.json package-lock.json &&
-git commit -m "$package: ci release-cut" &&
+version=$(node -pe "require('./package.json').version") &&
+git commit -m "$package: ci release-cut develop:$version release:$tag" &&
 git push -u origin develop
+git tag "$1-$version"
+git push --tags
+

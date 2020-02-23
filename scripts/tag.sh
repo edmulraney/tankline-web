@@ -18,13 +18,8 @@ git push
 
 if [ $? -eq 0 ]; then
   version=$(node -pe "require('./package.json').version")
-  if [ -n $version ]; then 
-    git tag $1-$version
-    git push --tags
-  else
-    echo "couldn't get version from package. we haven't pushed a new git tag. please review"
-    exit 1
-  fi
+  git tag "$1-$version"
+  git push --tags
 else
   exit 1
 fi
