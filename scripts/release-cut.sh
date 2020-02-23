@@ -33,8 +33,9 @@ git pull &&
 npm version minor &&
 git add package.json package-lock.json &&
 version=$(node -pe "require('./package.json').version") &&
-git commit -m "$package: ci release-cut develop@$version core-release@$tag" &&
-git push -u origin develop
-git tag "$1-$version"
-git push --tags
+git commit -m "$package: ci(release-cut) develop@$version core-release@$tag" &&
+git push -u origin develop &&
+git tag "$1-$version" &&
+git push --tags &&
+npm publish --access public
 
