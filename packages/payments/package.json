@@ -1,6 +1,6 @@
 {
   "name": "@tankline/tankline-web-payments",
-  "version": "1.0.172",
+  "version": "1.0.173",
   "main": "dist/main.js",
   "directories": {
     "lib": "lib"
