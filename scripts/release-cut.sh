@@ -19,8 +19,8 @@ fi
 # create release branch
 cd $package
 set +e
-branch_exists=$(git show-ref --verify --quiet "refs/heads/release-$1")
-if [[ $branch_exists -eq 0 ]]; then 
+branch_exists=$(git branch --list "release-$1")
+if [ $branch_exists ]; then 
   git branch -D "release-$1"
 fi
 set -e
