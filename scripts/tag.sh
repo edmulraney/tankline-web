@@ -15,6 +15,8 @@ cd $package && npm version $2 &&
 git add package.json package-lock.json &&
 git commit -m 'ci tag: patch' &&
 git push
+version=$(node -pe "require('./$package/package.json').version")
+git tag $version
 git push --tags
 
 
