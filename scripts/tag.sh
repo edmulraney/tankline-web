@@ -16,7 +16,7 @@ git add package.json package-lock.json &&
 git commit -m 'ci tag: patch' &&
 git push
 version=$(node -pe "require('./$package/package.json').version")
-git tag $version
+git tag $1-$version
 git push --tags
 
 
