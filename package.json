@@ -10,7 +10,8 @@
     "test-pkg": "./scripts/test.sh",
     "build-pkg": "./scripts/build.sh",
     "tag-pkg": "./scripts/tag.sh",
-    "publish-pkg": "./scripts/publish.sh"
+    "publish-pkg": "./scripts/publish.sh",
+    "release-cut-pgk": "./scripts/release-cut.sh"
   },
   "keywords": [],
   "author": "",
