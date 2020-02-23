@@ -15,13 +15,12 @@ if ! [ -d $package ]; then
 fi
 
 cd $package
+git branch -d "release-$1"
+git checkout -b "release-$1" $tag &&
+git push -u origin "release-$1" &&
 git checkout develop &&
 git pull &&
 npm version minor &&
 git add package.json package-lock.json &&
 git commit -m "$package: ci release-cut" &&
-git push
-
-git branch -d "release-$1"
-git checkout -b "release-$1" $tag &&
-git push -u origin "release-$1"
+git push -u origin develop
