@@ -18,7 +18,12 @@ fi
 
 # create release branch
 cd $package
-git branch -d "release-$1"
+set +e
+branch_exists=$(git show-ref --verify --quiet "refs/heads/release-$1")
+if [[ $branch_exists -eq 0 ]]; then 
+  git branch -D "release-$1"
+fi
+set -e
 git checkout -b "release-$1" $tag &&
 git push -u origin "release-$1"
 
