@@ -9,6 +9,7 @@
     "install-pkg": "./scripts/install.sh",
     "test-pkg": "./scripts/test.sh",
     "build-pkg": "./scripts/build.sh",
+    "version-pkg": "./scripts/version.sh",
     "publish-pkg": "./scripts/publish.sh"
   },
   "keywords": [],
