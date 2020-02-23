@@ -11,7 +11,7 @@
     "build-pkg": "./scripts/build.sh",
     "tag-pkg": "./scripts/tag.sh",
     "publish-pkg": "./scripts/publish.sh",
-    "release-cut-pgk": "./scripts/release-cut.sh"
+    "release-cut-pkg": "./scripts/release-cut.sh"
   },
   "keywords": [],
   "author": "",
