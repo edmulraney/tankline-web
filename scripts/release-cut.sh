@@ -1,4 +1,5 @@
 #!/bin/bash
+set -e 
 
 package="packages/$1"
 tag=$2
@@ -15,10 +16,13 @@ if ! [ -d $package ]; then
   exit 1
 fi
 
+# create release branch
 cd $package
 git branch -d "release-$1"
 git checkout -b "release-$1" $tag &&
-git push -u origin "release-$1" &&
+git push -u origin "release-$1"
+
+# increment develop branch
 git checkout develop &&
 git pull &&
 npm version minor &&

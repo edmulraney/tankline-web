@@ -1,4 +1,5 @@
 #!/bin/bash
+set -e 
 
 package="packages/$1"
 if ! [ -d $package ]; then 
@@ -16,13 +17,9 @@ git add package.json package-lock.json &&
 git commit -m "$package: ci tag (patch) " &&
 git push
 
-if [ $? -eq 0 ]; then
-  version=$(node -pe "require('./package.json').version")
-  git tag "$1-$version"
-  git push --tags
-else
-  exit 1
-fi
+version=$(node -pe "require('./package.json').version")
+git tag "$1-$version"
+git push --tags
 
 # latest development branch                               - develop branch
 # next release branch                                     - tag rc-1.0.0
