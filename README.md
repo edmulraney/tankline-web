@@ -15,3 +15,9 @@ payments-1.0.4
 
 promote payments-1.0.4 to production - doesn't need a branch?
 no master?
+
+the `scripts` folder possibly should be the only thing that lives outside the monorepo
+- rename to `ci-tools`
+- the risk of it living inside the monorepo is that is we perform changes to the ci scripts those changes won't exist for any previous tag
+- the reason the script exists at all in code instead of all in the CI server is that we have as much in source control as possible rather than needing to depend on teamcity so much.
+- if it was a repo outside the monorepo then we could always pull latest into the monorepo and not worry about old tags 
