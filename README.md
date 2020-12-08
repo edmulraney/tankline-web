@@ -6,6 +6,7 @@ Prototype micro-frontends (fully fledged webpack builds, no iframes) inside a mo
 Single release branch won't allow product areas to independently release their work.
 
 Branching/tagging
+
 develop (all working in same latest develop seems great for integration (trunk based development))
 payments-1.0.1
 payments-1.0.2
